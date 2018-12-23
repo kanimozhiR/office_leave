@@ -1,0 +1,54 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Empid:</strong>
+  <%= @leafe.empid %>
+</p>
+
+<p>
+  <strong>Requester emp:</strong>
+  <%= @leafe.requester_emp_id %>
+</p>
+
+<p>
+  <strong>Start date:</strong>
+  <%= @leafe.start_date %>
+</p>
+
+<p>
+  <strong>End date:</strong>
+  <%= @leafe.end_date %>
+</p>
+
+<p>
+  <strong>No of days:</strong>
+  <%= @leafe.no_of_days %>
+</p>
+
+<p>
+  <strong>Leave type:</strong>
+  <%= @leafe.leave_type %>
+</p>
+
+<p>
+  <strong>Action date:</strong>
+  <%= @leafe.action_date %>
+</p>
+
+<p>
+  <strong>Request remarks:</strong>
+  <%= @leafe.request_remarks %>
+</p>
+
+<p>
+  <strong>Action remarks:</strong>
+  <%= @leafe.action_remarks %>
+</p>
+
+<p>
+  <strong>Status:</strong>
+  <%= @leafe.status %>
+</p>
+
+<%= link_to 'Edit', edit_leafe_path(@leafe) %> |
+<%= link_to 'Back', leaves_path %>

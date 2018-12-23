@@ -1,0 +1,2 @@
+module LeaveCreditHelper
+end

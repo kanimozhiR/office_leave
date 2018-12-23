@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Deviseapp</title>
+   <center>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+<%#= stylesheet_link_tag    "application", :media => "all" %>
+<%= stylesheet_link_tag "application" %>
+  <%= javascript_include_tag "defaults" %>
+
+  <%= csrf_meta_tags %>
+
+
+   <body>
+
+     
+     <div class="footer">
+        <p>Footer</p>
+    </div>      
+  </body>    <%= yield %>
+
+</center> </head>
+
+</html>
+
+
+
+
+
+

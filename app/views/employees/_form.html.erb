@@ -1,0 +1,97 @@
+<br><br>
+<table border="1">
+  <thead>
+    <tr><td>
+
+<%= form_with(model: employee, local: true) do |form| %>
+  <% if employee.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(employee.errors.count, "error") %> prohibited this employee from being saved:</h2>
+
+      <ul>
+      <% employee.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+
+
+
+  <div class="field">
+    <%= form.label :name %>
+    <%= form.text_field :name %>
+  </div>
+
+  <div class="field">
+    <%= form.label :empid %>
+    <%= form.number_field :empid %>
+  </div>
+
+  <div class="field">
+    <%= form.label :age %>
+    <%= form.number_field :age %>
+  </div>
+
+  <div class="field">
+    <%= form.label :gender %>
+      <p><%= form.radio_button :gender, "Male"  %> 
+        <label>Male</label><%= form.radio_button :gender, "Female"  %>   <label>Female</label></p>
+
+
+  </div>
+
+  <div class="field">
+    <%= form.label :dob %>
+    <%= form.date_select :dob,  :order => [:day, :month, :year], :use_short_month => true, :start_year => 1900, :end_year => Date.today.year %>
+  </div>
+
+  <div class="field">
+    <%= form.label :doj %>
+    <%= form.date_select :doj, :order => [:day, :month, :year], :use_short_month => true,:start_year => 1900, :end_year => Date.today.year %>
+  </div>
+
+  
+</td><td>
+  <div class="field">
+    <%= form.label :designation %>
+    <%= form.text_field :designation %>
+  </div>
+  <div class="field">
+    <%= form.label :role %>
+        <%= form.select :role, options_for_select(["Admin", "Employee",]) %>
+
+  </div>
+
+  <div class="field">
+    <%= form.label :phone %>
+    <%= form.text_field :phone %>
+  </div>
+
+  <div class="field">
+    <%= form.label :email_id %>
+    <%= form.text_field :email_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :encashed_days %>
+    <%= form.number_field :encashed_days %>
+  </div>
+
+  <div class="field">
+    <%= form.label :separation_date %>
+    <%= form.date_select :separation_date , :order => [:day, :month, :year], :use_short_month => true,:start_year => 1900, :end_year => Date.today.year%>
+  </div>
+
+  <div class="field">
+    <%= form.label :manager_name %>
+    <%= form.text_field :manager_name %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>
+</td>
+    </tr></thead></table>

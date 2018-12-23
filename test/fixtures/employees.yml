@@ -1,0 +1,31 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  empid: 1
+  age: 1
+  gender: MyString
+  dob: 2018-12-19
+  doj: 2018-12-19
+  designation: MyString
+  role: MyString
+  phone: MyString
+  email_id: MyString
+  encashed_days: 1
+  separation_date: 2018-12-19
+  manager_name: MyString
+
+two:
+  name: MyString
+  empid: 1
+  age: 1
+  gender: MyString
+  dob: 2018-12-19
+  doj: 2018-12-19
+  designation: MyString
+  role: MyString
+  phone: MyString
+  email_id: MyString
+  encashed_days: 1
+  separation_date: 2018-12-19
+  manager_name: MyString

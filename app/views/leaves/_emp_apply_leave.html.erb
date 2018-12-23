@@ -1,0 +1,76 @@
+<h1>Apply Leave</h1>
+  
+  <%=form_for :leafe, :url=>{ :controller =>'leaves', :action=>'apply_leave_action'} do  |form|%>
+  <% if @leafe.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@leafe.errors.count, "error") %> prohibited this leafe from being saved:</h2>
+
+      <ul>
+      <% @leafe.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul> 
+    </div>
+  <% end %>
+
+
+<table border="1">
+<tr><td>
+    <%= form.label :StartDate %>
+    <%= form.date_select :start_date , :default => Date.today, :order => [:day, :month, :year], :use_short_month => true, :start_year => (Date.today.year), :end_year => (Date.today.year + 1) %></td><td>
+
+    <%= form.label :EndDate %>
+    <%= form.date_select :end_date,  :default => Date.today, :order => [:day, :month, :year], :use_short_month => true, :start_year => (Date.today.year), :end_year => (Date.today.year + 1), :html => {:class => "leave_end"}  %>
+  </td></tr>
+  
+
+ 
+<tr><td>
+    <%= form.label :LeaveType %>
+    <%= form.select :leave_type, options_for_select(["Sick Leave", "Casual Leave","Earned Leave"]) %></td><td>
+ 
+    <%= form.label :RequestRemarks %>
+    <%= form.text_area :request_remarks %>
+  
+</td></tr><tr><td colspan="2">
+    <center><%= form.submit 'Apply Leave'%></center>
+<% end %>
+ </td></tr></table>
+
+
+ <h3>Leave History</h3>
+ 
+<table border="1">
+  <thead>
+    <tr>
+      <th>Employee Id</th>
+      <th>Start date</th>
+      <th>End date</th>
+      <th>No of days</th>
+      <th>Leave type</th>
+      <th>Request remarks</th>
+      <th>Action remarks</th>
+      <th>Status</th>
+      <th>Cancel Leave</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @le.each do |leafe| %>
+      <tr>
+         <td><%= leafe.empid %></td>
+        <td><%= leafe.start_date.strftime("%d-%b-%y") %></td>
+        <td><%= leafe.end_date.strftime("%d-%b-%y") %></td>
+        <td><%= leafe.no_of_days %></td>
+        <td><%= leafe.leave_type %></td>
+        <td><%= leafe.request_remarks %></td>
+        <td><%= leafe.action_remarks %></td>
+        <td><%= leafe.status %></td>
+        <td><button onclick="myFunction()">
+        <%= button_to 'cancel', {:controller => 'leaves', :action => 'destroy', :id => leafe.id}%></button></td>
+      </tr>
+    <% end %>
+  </tbody>
+
+</table>
+<%= paginate @le, :window =>4 %>

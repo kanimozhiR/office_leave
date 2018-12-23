@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head><body>
+<div class="topnav">
+   <% if user_signed_in? %>
+
+    <p><%= link_to 'Sign out', '/users/sign_out', :method => :delete, :class=>'a' %> </p>
+     <% end %>  
+     	<p><%=link_to "Requested Leaves", apply_leave_path,:class=>'a' %></p>
+	<p><%=link_to "Employees Profile", employees_path,:class=>'a' %></p>
+
+	<p><%=link_to "Dashboard", rails_admin_path,:class=>'a' %></p>
+	<p><%=link_to "New Employee", new_employee_path, :class=>'a' %></p>  
+		
+	<script>
+function myFunction() {
+  confirm("Are you Sure to Credit Leave for All Employees");
+}
+</script>
+	 <p><button onclick="myFunction()"><%=link_to "Leave Credit", leave_credit_create_path, :class=>'a' %></button></p>
+
+    
+  
+</div>
+
+</body></head></html>

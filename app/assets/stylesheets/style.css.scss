@@ -1,0 +1,121 @@
+#header {height:90px; overflow:hidden; border:1px solid purple; width:60%;margin-left:20%;margin-top:80px;}
+#bannerimg{border:1px solid red}
+#main{border:1px solid blue; width: 60%; margin-left:20%; max-height:550px; height: auto; font-size:.9em; color:#224B96; overflow:auto;}
+#primary{border:1px solid pink;height:100%; overflow:auto; padding-bottom:5%; margin-bottom:20px;}
+
+.ui-widget-overlay {
+  background-color: #333;
+  filter:alpha(opacity=80);
+  opacity: 0.8;
+  zoom: 1;
+}
+
+.popup {
+  background-color: #fff;
+  border: 3px solid #C4D7DC;
+  padding: 8px;
+  width: 425px;
+  font-size:.70em;
+  margin: 0 auto;
+}
+
+
+#flash_notice { 
+  border: 2px solid #900;
+  display: none; 
+  font-weight:bold;
+}
+
+.notice_dialog #flash_notice { display: block; }
+.notice_dialog .ui-dialog-titlebar { display: none; }
+
+#flash_notice ul.notice_messages { 
+   width:auto;
+   text-align:justify;
+}
+
+
+#flash_notice ul.notice_messages li { 
+  margin: 5px 0; 
+}
+
+#flash_error { 
+  border: 2px solid #900;
+  display: none;
+}
+
+.error_dialog #flash_error { display: block; }
+
+#flash_error ul.error_messages { 
+  width:500px;
+  text-wrap:none;
+  text-align:justify;
+}
+
+.error_dialog #flash_error h4 { 
+  margin-top: 8px;
+}
+
+.buttons{
+margin-left:1%;
+margin-bottom:20px;
+border-radius:5px;
+}
+
+* {box-sizing: border-box;}
+
+
+.footer{
+   position: fixed;
+   left: 0;
+   bottom: 0;
+   width: 100%;
+   background-color: #423D3D;
+   color: white;
+   text-align: center;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.topnav {
+  overflow: hidden;
+  padding: 0;
+  background-color: grey;
+}
+
+.topnav a {
+  float: right;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.topnav a.active {
+  background-color: white;
+  padding: 14px 16px;
+  color: white;
+}
+
+.pretty th .current {
+  padding-right: 12px;
+  background-repeat: no-repeat;
+  background-position: right center;
+}
+
+.pretty th .asc {
+  background-image: url(/images/up_arrow.gif);
+}
+
+.pretty th .desc {
+  background-image: url(/images/down_arrow.gif);
+}

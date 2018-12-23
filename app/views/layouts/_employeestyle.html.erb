@@ -1,0 +1,14 @@
+
+
+
+<div class="topnav">
+   <% if user_signed_in? %>
+
+    <p><%= link_to 'Sign out', '/users/sign_out', :method => :delete, :class=>'a' %> </p>
+     <% end %>
+     
+   
+<p><%= link_to 'My Profile', emp_leave_status_path, :class=>'a' %></p>
+    <p><%= link_to 'Apply Leave ', apply_leave_path,:class => 'a' %></p>  
+
+        </div>

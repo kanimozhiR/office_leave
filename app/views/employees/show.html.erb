@@ -1,0 +1,69 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @employee.name %>
+</p>
+
+<p>
+  <strong>Empid:</strong>
+  <%= @employee.empid %>
+</p>
+
+<p>
+  <strong>Age:</strong>
+  <%= @employee.age %>
+</p>
+
+<p>
+  <strong>Gender:</strong>
+  <%= @employee.gender %>
+</p>
+
+<p>
+  <strong>Dob:</strong>
+  <%= @employee.dob %>
+</p>
+
+<p>
+  <strong>Doj:</strong>
+  <%= @employee.doj %>
+</p>
+
+<p>
+  <strong>Designation:</strong>
+  <%= @employee.designation %>
+</p>
+
+<p>
+  <strong>Role:</strong>
+  <%= @employee.role %>
+</p>
+
+<p>
+  <strong>Phone:</strong>
+  <%= @employee.phone %>
+</p>
+
+<p>
+  <strong>Email:</strong>
+  <%= @employee.email_id %>
+</p>
+
+<p>
+  <strong>Encashed days:</strong>
+  <%= @employee.encashed_days %>
+</p>
+
+<p>
+  <strong>Separation date:</strong>
+  <%= @employee.separation_date %>
+</p>
+
+<p>
+  <strong>Manager name:</strong>
+  <%= @employee.manager_name %>
+</p>
+
+<%= link_to 'Edit', edit_employee_path(@employee) %> |
+<%= link_to 'Back', employees_path %>
